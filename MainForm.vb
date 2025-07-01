@@ -149,9 +149,9 @@ NotInheritable Class MainForm
 				'	z.F12 = z.F12 * 10
 				'Next
 
-				With cn.NewCommand("select * from Risk")
-					ds.Risk.Load(.ExecuteReader())
-				End With
+				'With cn.NewCommand("select * from Risk")
+				'	ds.Risk.Load(.ExecuteReader())
+				'End With
 
 				With cn.NewCommand("select * from MktSpec")
 					ds.MktSpec.Load(.ExecuteReader())
@@ -187,11 +187,11 @@ NotInheritable Class MainForm
 
 	Private Sub _oRefreshAllButton_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles oRefreshAllButton.ItemClick
 		gvr.BeginDataUpdate()
-		gvs.BeginDataUpdate()
+		'gvs.BeginDataUpdate()
 		gvm.BeginDataUpdate()
 		gvi.BeginDataUpdate()
 		gve.BeginDataUpdate()
-		gvt.BeginDataUpdate()
+		'gvt.BeginDataUpdate()
 		gvo.BeginDataUpdate()
 		oRefreshAllButton.Enabled = False
 
@@ -217,11 +217,11 @@ NotInheritable Class MainForm
 	Private Sub bwRefresh_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bwRefresh.RunWorkerCompleted
 		Dim em As String = e.Result(0)
 		gvr.EndDataUpdate()
-		gvs.EndDataUpdate()
+		'gvs.EndDataUpdate()
 		gvm.EndDataUpdate()
 		gvi.EndDataUpdate()
 		gve.EndDataUpdate()
-		gvt.EndDataUpdate()
+		'gvt.EndDataUpdate()
 		gvo.EndDataUpdate()
 		oRefreshAllButton.Enabled = True
 
@@ -301,7 +301,7 @@ NotInheritable Class MainForm
 				Dim rRar As ods.RARRow = Nothing
 				Dim rmkt0 As ods.MktSpecRow = Nothing
 				Dim rmkt1 As ods.MktSpecRow = Nothing
-				Dim rRisk As ods.RiskRow = Nothing
+				'Dim rRisk As ods.RiskRow = Nothing
 				Dim r0 As ods.DataRow = Nothing
 				Dim r1 As ods.DataRow = Nothing
 
@@ -396,11 +396,11 @@ NotInheritable Class MainForm
 
 					If rmkt0.c18.ToLower() = "no" Then Continue For
 
-					rRisk = x.Risk.NewRow()
-					rRisk.rn = fileNo
-					rRisk.c1 = rmkt0.c2
-					rRisk.c4 = rmkt0.c20
-					rRisk.c9 = rmkt0.c7
+					'rRisk = x.Risk.NewRow()
+					'rRisk.rn = fileNo
+					'rRisk.c1 = rmkt0.c2
+					'rRisk.c4 = rmkt0.c20
+					'rRisk.c9 = rmkt0.c7
 
 					rRar.F2 = rmkt0.c2
 
@@ -647,18 +647,18 @@ NotInheritable Class MainForm
 						' color the data
 						rRar._color = 1 ' Color.FromArgb(200, 160, 35).ToArgb()
 
-						rRisk.c2 = rRar.F5
-						If rmkt0.c19.ToLower().StartsWith("b") Then
-							rRisk.c3 = rmkt0.c4 * (cl - mins + rmkt0.c5)
-						Else
-							rRisk.c3 = rmkt0.c4 * (maxs - cl - rmkt0.c5)
-						End If
-						rRisk.c4 = rmkt0.c20
-						rRisk.c5 = rRisk.c2 * rmkt0.c20
-						rRisk.c6 = rRisk.c5 / accountSize
-						rRisk.c7 = rRisk.c3 * rmkt0.c20
-						rRisk.c8 = rRisk.c7 / accountSize
-						x.Risk.Rows.Add(rRisk)
+						'rRisk.c2 = rRar.F5
+						'If rmkt0.c19.ToLower().StartsWith("b") Then
+						'	rRisk.c3 = rmkt0.c4 * (cl - mins + rmkt0.c5)
+						'Else
+						'	rRisk.c3 = rmkt0.c4 * (maxs - cl - rmkt0.c5)
+						'End If
+						'rRisk.c4 = rmkt0.c20
+						'rRisk.c5 = rRisk.c2 * rmkt0.c20
+						'rRisk.c6 = rRisk.c5 / accountSize
+						'rRisk.c7 = rRisk.c3 * rmkt0.c20
+						'rRisk.c8 = rRisk.c7 / accountSize
+						'x.Risk.Rows.Add(rRisk)
 					End If
 
 
@@ -877,7 +877,7 @@ NotInheritable Class MainForm
 
 
 				'' saving to database
-				cn.NewCommand("delete from [risk]").ExecuteNonQuery()
+				'cn.NewCommand("delete from [risk]").ExecuteNonQuery()
 				cn.NewCommand("delete from [rar]").ExecuteNonQuery()
 				cn.NewCommand("delete from [sector]").ExecuteNonQuery()
 
@@ -944,70 +944,70 @@ NotInheritable Class MainForm
 					cmRarInsert.ExecuteNonQuery()
 				Next
 
-				Dim cmRiskInsert As OleDbCommand = cn.NewCommand("insert into [Risk] (rn,c1,c2,c3,c4,c5,c6,c7,c8,c9) values (?,?,?,?,?,?,?,?,?,?)")
-				With cmRiskInsert.Parameters
-					.Add("@rn", OleDbType.Integer)
-					.Add("@c1", OleDbType.VarChar, 250)
-					For i As Int32 = 2 To 8 Step 1
-						.Add("@c" & i, OleDbType.Double)
-					Next
-					.Add("@c9", OleDbType.VarChar, 250)
-				End With
-				cmRiskInsert.Prepare()
-				For Each rRisk In x.Risk.Rows
-					With cmRiskInsert.Parameters
-						For Each c As DataColumn In ds.Risk.Columns
-							If c.ColumnName.StartsWith("_total") Then Continue For
-							.Item("@" & c.ColumnName).Value = rRisk(c.ColumnName)
-						Next
-					End With
-					cmRiskInsert.ExecuteNonQuery()
-				Next
+				'Dim cmRiskInsert As OleDbCommand = cn.NewCommand("insert into [Risk] (rn,c1,c2,c3,c4,c5,c6,c7,c8,c9) values (?,?,?,?,?,?,?,?,?,?)")
+				'With cmRiskInsert.Parameters
+				'	.Add("@rn", OleDbType.Integer)
+				'	.Add("@c1", OleDbType.VarChar, 250)
+				'	For i As Int32 = 2 To 8 Step 1
+				'	.Add("@c" & i, OleDbType.Double)
+				'	Next
+				'	.Add("@c9", OleDbType.VarChar, 250)
+				'End With
+				'cmRiskInsert.Prepare()
+				'For Each rRisk In x.Risk.Rows
+				'	With cmRiskInsert.Parameters
+				'		For Each c As DataColumn In ds.Risk.Columns
+				'			If c.ColumnName.StartsWith("_total") Then Continue For
+				'			.Item("@" & c.ColumnName).Value = rRisk(c.ColumnName)
+				'		Next
+				'	End With
+				'	cmRiskInsert.ExecuteNonQuery()
+				'Next
 
 
-				Dim cmSectorInsert As OleDbCommand = cn.NewCommand("insert into [sector] (rn, c1, c2) values (?,?,?)")
-				With cmSectorInsert.Parameters
-					.Add("@rn", OleDbType.Integer)
-					.Add("@c1", OleDbType.VarChar, 250)
-					.Add("@c2", OleDbType.Double)
-				End With
+				'Dim cmSectorInsert As OleDbCommand = cn.NewCommand("insert into [sector] (rn, c1, c2) values (?,?,?)")
+				'With cmSectorInsert.Parameters
+				'	.Add("@rn", OleDbType.Integer)
+				'	.Add("@c1", OleDbType.VarChar, 250)
+				'	.Add("@c2", OleDbType.Double)
+				'End With
 
 
-				Dim sect As New Dictionary(Of String, Double)
-				sect.Add("Stock", 0)
-				sect.Add("IR", 0)
-				sect.Add("Currency", 0)
-				sect.Add("Grain", 0)
-				sect.Add("Meat", 0)
-				sect.Add("Metal", 0)
-				sect.Add("Soft", 0)
-				sect.Add("Energy", 0)
-				sect.Add("Others", 0)
-				Dim mkts As String = ""
-				For Each rRisk In x.Risk.Rows
-					mkts = rRisk.c9.ToLower()
-					If mkts.StartsWith("stock") Then : sect("Stock") += rRisk.c8
-					ElseIf mkts.StartsWith("ir") Then : sect("IR") += rRisk.c8
-					ElseIf mkts.StartsWith("currenc") Then : sect("Currency") += rRisk.c8
-					ElseIf mkts.StartsWith("grain") Then : sect("Grain") += rRisk.c8
-					ElseIf mkts.StartsWith("meat") Then : sect("Meat") += rRisk.c8
-					ElseIf mkts.StartsWith("metal") Then : sect("Metal") += rRisk.c8
-					ElseIf mkts.StartsWith("soft") Then : sect("Soft") += rRisk.c8
-					ElseIf mkts.StartsWith("energ") Then : sect("Energy") += rRisk.c8
-					ElseIf mkts.StartsWith("other") Then : sect("Others") += rRisk.c8
-					End If
-				Next
+				'Dim sect As New Dictionary(Of String, Double)
+				'sect.Add("Stock", 0)
+				'sect.Add("IR", 0)
+				'sect.Add("Currency", 0)
+				'sect.Add("Grain", 0)
+				'sect.Add("Meat", 0)
+				'sect.Add("Metal", 0)
+				'sect.Add("Soft", 0)
+				'sect.Add("Energy", 0)
+				'sect.Add("Others", 0)
+				'Dim mkts As String = ""
+				'For Each rRisk In x.Risk.Rows
+				'	mkts = rRisk.c9.ToLower()
+				'	If mkts.StartsWith("stock") Then : sect("Stock") += rRisk.c8
+				'	ElseIf mkts.StartsWith("ir") Then : sect("IR") += rRisk.c8
+				'	ElseIf mkts.StartsWith("currenc") Then : sect("Currency") += rRisk.c8
+				'	ElseIf mkts.StartsWith("grain") Then : sect("Grain") += rRisk.c8
+				'	ElseIf mkts.StartsWith("meat") Then : sect("Meat") += rRisk.c8
+				'	ElseIf mkts.StartsWith("metal") Then : sect("Metal") += rRisk.c8
+				'	ElseIf mkts.StartsWith("soft") Then : sect("Soft") += rRisk.c8
+				'	ElseIf mkts.StartsWith("energ") Then : sect("Energy") += rRisk.c8
+				'	ElseIf mkts.StartsWith("other") Then : sect("Others") += rRisk.c8
+				'	End If
+				'Next
 
-				fileNo = 0
-				For Each z As KeyValuePair(Of String, Double) In sect
-					fileNo += 1
-					With cmSectorInsert.Parameters
-						.Item("@rn").Value = fileNo
-						.Item("@c1").Value = z.Key
-						.Item("@c2").Value = z.Value
-					End With
-					cmSectorInsert.ExecuteNonQuery()
-				Next
+				'fileNo = 0
+				'For Each z As KeyValuePair(Of String, Double) In sect
+				'	fileNo += 1
+				'	With cmSectorInsert.Parameters
+				'		.Item("@rn").Value = fileNo
+				'		.Item("@c1").Value = z.Key
+				'		.Item("@c2").Value = z.Value
+				'	End With
+				'	cmSectorInsert.ExecuteNonQuery()
+				'Next
 
 			Catch ex As Exception
 				em = ex.Message
@@ -1554,34 +1554,34 @@ NotInheritable Class MainForm
 		gvr.ExportToHtml(sfd.FileName)
 	End Sub
 
-	Private Sub _oRiskExport_PDF_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_PDF.ItemClick
-		sfd.Filter = save_pdf
-		sfd.FileName = ""
-		If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
-		gvs.ExportToPdf(sfd.FileName)
-	End Sub
+	'Private Sub _oRiskExport_PDF_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_PDF.ItemClick
+	'	sfd.Filter = save_pdf
+	'	sfd.FileName = ""
+	'	If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
+	'		gvs.ExportToPdf(sfd.FileName)
+	'End Sub
 
-	Private Sub _oRiskExport_Excel_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_Excel.ItemClick
-		sfd.Filter = save_xls
-		sfd.FileName = ""
-		If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
-		gvs.ExportToXlsx(sfd.FileName)
-	End Sub
+	'Private Sub _oRiskExport_Excel_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_Excel.ItemClick
+	'	sfd.Filter = save_xls
+	'	sfd.FileName = ""
+	'	If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
+	'		gvs.ExportToXlsx(sfd.FileName)
+	'End Sub
 
-	Private Sub _oRiskExport_CSV_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_CSV.ItemClick
-		sfd.Filter = save_csv
-		sfd.FileName = ""
-		If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
-		gvs.ExportToCsv(sfd.FileName)
-	End Sub
+	'Private Sub _oRiskExport_CSV_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_CSV.ItemClick
+	'	sfd.Filter = save_csv
+	'	sfd.FileName = ""
+	'	If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
+	'		gvs.ExportToCsv(sfd.FileName)
+	'End Sub
 
 
-	Sub _oRiskExport_Html_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_Html.ItemClick
-		sfd.Filter = save_html
-		sfd.FileName = ""
-		If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
-		gvs.ExportToHtml(sfd.FileName)
-	End Sub
+	'Sub _oRiskExport_Html_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oRiskExport_Html.ItemClick
+	'	sfd.Filter = save_html
+	'	sfd.FileName = ""
+	'	If sfd.ShowDialog(Me) <> DialogResult.OK Then Exit Sub
+	'	gvs.ExportToHtml(sfd.FileName)
+	'End Sub
 
 	Private Sub _oSetFolderButton_ItemClick(sender As Object, e As XtraBars.ItemClickEventArgs) Handles oSetFolderButton.ItemClick
 		fbd.SelectedPath = src_dir
@@ -1755,6 +1755,10 @@ NotInheritable Class MainForm
 	Private Sub gvm_FocusedRowChanged(sender As Object, e As FocusedRowChangedEventArgs) Handles gvm.FocusedRowChanged
 		Dim en As Boolean = (e.FocusedRowHandle >= 0)
 		oDeleteButton.Enabled = en
+	End Sub
+
+	Private Sub OfficeNavigationBar1_Click(sender As Object, e As EventArgs) Handles OfficeNavigationBar1.Click
+
 	End Sub
 
 	'Private Sub refreshExchange(sender As Object, e As WaitWindowEventArgs)
