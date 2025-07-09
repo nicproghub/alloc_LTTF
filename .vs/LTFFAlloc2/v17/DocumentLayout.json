@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2source_nic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2source_nic\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|solutionrelative:mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|c:\\users\\nicole\\desktop\\stevenjob\\allocation app\\ltffalloc2source_nic\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2source_nic\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|solutionrelative:mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|c:\\users\\nicole\\desktop\\stevenjob\\allocation app\\ltffalloc2source_nic\\mainform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|c:\\users\\nicole\\desktop\\stevenjob\\allocation app\\ltffalloc2source_nic\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|solutionrelative:mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2source_nic\\mainform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{F4881FED-29F1-4B74-800C-4FE95EFAECB6}|LTFFAlloc2.vbproj|solutionrelative:mainform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -39,20 +39,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainForm.vb",
               "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2source_nic\\MainForm.vb",
               "RelativeDocumentMoniker": "MainForm.vb",
               "ToolTip": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2source_nic\\MainForm.vb",
               "RelativeToolTip": "MainForm.vb",
-              "ViewState": "AgIAAPAAAAAAAAAAAAAAwPcAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAFUCAAAAAAAAAAApwGMCAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-06-26T11:37:15.946Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainForm.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Nicole\\Desktop\\StevenJob\\Allocation App\\LTFFAlloc2source_nic\\MainForm.vb",
               "RelativeDocumentMoniker": "MainForm.vb",

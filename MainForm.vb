@@ -182,8 +182,8 @@ NotInheritable Class MainForm
 		gvr.BeginDataUpdate()
 		'gvs.BeginDataUpdate() ' risk data
 		gvm.BeginDataUpdate()
-		gvi.BeginDataUpdate()
-		gve.BeginDataUpdate()
+		'gvi.BeginDataUpdate()
+		'gve.BeginDataUpdate()
 		'gvt.BeginDataUpdate() ' sector data
 		gvo.BeginDataUpdate()
 		oRefreshAllButton.Enabled = False
@@ -196,8 +196,8 @@ NotInheritable Class MainForm
 		gvr.EndDataUpdate()
 		'gvs.EndDataUpdate()
 		gvm.EndDataUpdate()
-		gvi.EndDataUpdate()
-		gve.EndDataUpdate()
+		'gvi.EndDataUpdate()
+		'gve.EndDataUpdate()
 		'gvt.EndDataUpdate()
 		gvo.EndDataUpdate()
 		oRefreshAllButton.Enabled = True

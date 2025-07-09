@@ -50,7 +50,6 @@ Partial Class MainForm
         Me.oRiskExport_Html = New DevExpress.XtraBars.BarButtonItem()
         Me.Bar5 = New DevExpress.XtraBars.Bar()
         Me.BarStaticItem3 = New DevExpress.XtraBars.BarStaticItem()
-        Me.StandaloneBarDockControl5 = New DevExpress.XtraBars.StandaloneBarDockControl()
         Me.Bar6 = New DevExpress.XtraBars.Bar()
         Me.BarStaticItem5 = New DevExpress.XtraBars.BarStaticItem()
         Me.oExportButton = New DevExpress.XtraBars.BarSubItem()
@@ -96,7 +95,6 @@ Partial Class MainForm
         Me.StandaloneBarDockControl3 = New DevExpress.XtraBars.StandaloneBarDockControl()
         Me.Bar8 = New DevExpress.XtraBars.Bar()
         Me.BarStaticItem4 = New DevExpress.XtraBars.BarStaticItem()
-        Me.StandaloneBarDockControl4 = New DevExpress.XtraBars.StandaloneBarDockControl()
         Me.Bar9 = New DevExpress.XtraBars.Bar()
         Me.BarStaticItem2 = New DevExpress.XtraBars.BarStaticItem()
         Me.StandaloneBarDockControl6 = New DevExpress.XtraBars.StandaloneBarDockControl()
@@ -125,33 +123,15 @@ Partial Class MainForm
         Me.colF12 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colF13 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.s3 = New DevExpress.XtraBars.Navigation.NavigationPage()
-        Me.s5 = New DevExpress.XtraBars.Navigation.NavigationPage()
-        Me.gci = New DevExpress.XtraGrid.GridControl()
         Me.bsMundi = New System.Windows.Forms.BindingSource(Me.components)
-        Me.gvi = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.colxArea = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colxCurrency = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colxDate = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colxInverse = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colxRate = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.s6 = New DevExpress.XtraBars.Navigation.NavigationPage()
         Me.gco = New DevExpress.XtraGrid.GridControl()
         Me.bsOptions = New System.Windows.Forms.BindingSource(Me.components)
         Me.gvo = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colc110 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colc24 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.s4 = New DevExpress.XtraBars.Navigation.NavigationPage()
-        Me.gce = New DevExpress.XtraGrid.GridControl()
         Me.bsExchange = New System.Windows.Forms.BindingSource(Me.components)
-        Me.gve = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.colxChange1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colxCountry1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colxCurrency1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colxDat01 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colxDat11 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colid = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.bsSector = New System.Windows.Forms.BindingSource(Me.components)
-        Me.OfficeNavigationBar1 = New DevExpress.XtraBars.Navigation.OfficeNavigationBar()
         Me.dlf = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
         Me.ssm = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.LTFFAlloc2.WaitForm1), False, False)
         Me.bwRefresh = New System.ComponentModel.BackgroundWorker()
@@ -160,6 +140,7 @@ Partial Class MainForm
         Me.bwMkt = New System.ComponentModel.BackgroundWorker()
         Me.sfd = New System.Windows.Forms.SaveFileDialog()
         Me.fbd = New System.Windows.Forms.FolderBrowserDialog()
+        Me.OfficeNavigationBar1 = New DevExpress.XtraBars.Navigation.OfficeNavigationBar()
         CType(Me.bm, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemSearchControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gcm, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -174,18 +155,12 @@ Partial Class MainForm
         CType(Me.bsRar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gvr, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.s3.SuspendLayout()
-        Me.s5.SuspendLayout()
-        CType(Me.gci, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bsMundi, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.gvi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.s6.SuspendLayout()
         CType(Me.gco, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bsOptions, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gvo, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.s4.SuspendLayout()
-        CType(Me.gce, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bsExchange, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.gve, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bsSector, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OfficeNavigationBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -234,8 +209,6 @@ Partial Class MainForm
         Me.bm.DockControls.Add(Me.barDockControlRight)
         Me.bm.DockControls.Add(Me.StandaloneBarDockControl2)
         Me.bm.DockControls.Add(Me.StandaloneBarDockControl3)
-        Me.bm.DockControls.Add(Me.StandaloneBarDockControl4)
-        Me.bm.DockControls.Add(Me.StandaloneBarDockControl5)
         Me.bm.DockControls.Add(Me.StandaloneBarDockControl6)
         Me.bm.Form = Me
         Me.bm.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.oRefreshAllButton, Me.oCalcButton, Me.oMktMciUpdateButton, Me.oStatus, Me.oExportButton, Me.oRarExport_PDF, Me.oRarExport_Excel, Me.oRarExport_Csv, Me.oRarExport_Html, Me.BarSubItem1, Me.oRiskExport_PDF, Me.oRiskExport_Excel, Me.oRiskExport_CSV, Me.oRiskExport_Html, Me.oSetFolderButton, Me.oFolderLoc, Me.BarStaticItem1, Me.BarStaticItem2, Me.BarStaticItem3, Me.BarStaticItem4, Me.BarStaticItem5, Me.BarStaticItem6, Me.oAddButton, Me.oDeleteButton, Me.SkinBarSubItem1, Me.BarEditItem1, Me.BarButtonItem1})
@@ -381,7 +354,6 @@ Partial Class MainForm
         Me.Bar5.OptionsBar.DisableCustomization = True
         Me.Bar5.OptionsBar.DrawDragBorder = False
         Me.Bar5.OptionsBar.UseWholeRow = True
-        Me.Bar5.StandaloneBarDockControl = Me.StandaloneBarDockControl5
         Me.Bar5.Text = "Custom 6"
         '
         'BarStaticItem3
@@ -392,17 +364,6 @@ Partial Class MainForm
         Me.BarStaticItem3.ImageOptions.LargeImage = Global.LTFFAlloc2.My.Resources.Resources.table_32x32
         Me.BarStaticItem3.Name = "BarStaticItem3"
         Me.BarStaticItem3.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        '
-        'StandaloneBarDockControl5
-        '
-        Me.StandaloneBarDockControl5.CausesValidation = False
-        Me.StandaloneBarDockControl5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.StandaloneBarDockControl5.Location = New System.Drawing.Point(0, 0)
-        Me.StandaloneBarDockControl5.Manager = Me.bm
-        Me.StandaloneBarDockControl5.Margin = New System.Windows.Forms.Padding(4)
-        Me.StandaloneBarDockControl5.Name = "StandaloneBarDockControl5"
-        Me.StandaloneBarDockControl5.Size = New System.Drawing.Size(1157, 42)
-        Me.StandaloneBarDockControl5.Text = "StandaloneBarDockControl5"
         '
         'Bar6
         '
@@ -864,7 +825,6 @@ Partial Class MainForm
         Me.Bar8.OptionsBar.DrawDragBorder = False
         Me.Bar8.OptionsBar.DrawSizeGrip = True
         Me.Bar8.OptionsBar.UseWholeRow = True
-        Me.Bar8.StandaloneBarDockControl = Me.StandaloneBarDockControl4
         Me.Bar8.Text = "Custom 9"
         '
         'BarStaticItem4
@@ -875,17 +835,6 @@ Partial Class MainForm
         Me.BarStaticItem4.ImageOptions.LargeImage = CType(resources.GetObject("BarStaticItem4.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BarStaticItem4.Name = "BarStaticItem4"
         Me.BarStaticItem4.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        '
-        'StandaloneBarDockControl4
-        '
-        Me.StandaloneBarDockControl4.CausesValidation = False
-        Me.StandaloneBarDockControl4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.StandaloneBarDockControl4.Location = New System.Drawing.Point(0, 0)
-        Me.StandaloneBarDockControl4.Manager = Me.bm
-        Me.StandaloneBarDockControl4.Margin = New System.Windows.Forms.Padding(4)
-        Me.StandaloneBarDockControl4.Name = "StandaloneBarDockControl4"
-        Me.StandaloneBarDockControl4.Size = New System.Drawing.Size(1157, 42)
-        Me.StandaloneBarDockControl4.Text = "StandaloneBarDockControl4"
         '
         'Bar9
         '
@@ -970,14 +919,12 @@ Partial Class MainForm
         Me.oNav.AllowTransitionAnimation = DevExpress.Utils.DefaultBoolean.[False]
         Me.oNav.Controls.Add(Me.s1)
         Me.oNav.Controls.Add(Me.s3)
-        Me.oNav.Controls.Add(Me.s5)
         Me.oNav.Controls.Add(Me.s6)
-        Me.oNav.Controls.Add(Me.s4)
         Me.oNav.Dock = System.Windows.Forms.DockStyle.Fill
         Me.oNav.Location = New System.Drawing.Point(0, 41)
         Me.oNav.Margin = New System.Windows.Forms.Padding(4)
         Me.oNav.Name = "oNav"
-        Me.oNav.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.s1, Me.s3, Me.s4, Me.s5, Me.s6})
+        Me.oNav.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.s1, Me.s3, Me.s6})
         Me.oNav.SelectedPage = Me.s3
         Me.oNav.Size = New System.Drawing.Size(1157, 415)
         Me.oNav.TabIndex = 5
@@ -1229,108 +1176,10 @@ Partial Class MainForm
         Me.s3.Name = "s3"
         Me.s3.Size = New System.Drawing.Size(1157, 415)
         '
-        's5
-        '
-        Me.ttc.SetAllowHtmlText(Me.s5, DevExpress.Utils.DefaultBoolean.[Default])
-        Me.s5.Caption = "IndexMundi"
-        Me.s5.Controls.Add(Me.gci)
-        Me.s5.Controls.Add(Me.StandaloneBarDockControl5)
-        Me.s5.Margin = New System.Windows.Forms.Padding(4)
-        Me.s5.Name = "s5"
-        Me.s5.Size = New System.Drawing.Size(1157, 415)
-        '
-        'gci
-        '
-        Me.gci.DataSource = Me.bsMundi
-        Me.gci.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.gci.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(4)
-        Me.gci.Location = New System.Drawing.Point(0, 42)
-        Me.gci.MainView = Me.gvi
-        Me.gci.Margin = New System.Windows.Forms.Padding(4)
-        Me.gci.MenuManager = Me.bm
-        Me.gci.Name = "gci"
-        Me.gci.Size = New System.Drawing.Size(1157, 373)
-        Me.gci.TabIndex = 3
-        Me.gci.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gvi})
-        '
         'bsMundi
         '
         Me.bsMundi.DataMember = "IndexMundi"
         Me.bsMundi.DataSource = Me.ds
-        '
-        'gvi
-        '
-        Me.gvi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.gvi.ColumnPanelRowHeight = 66
-        Me.gvi.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colxArea, Me.colxCurrency, Me.colxDate, Me.colxInverse, Me.colxRate})
-        Me.gvi.DetailHeight = 512
-        Me.gvi.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus
-        Me.gvi.GridControl = Me.gci
-        Me.gvi.Name = "gvi"
-        Me.gvi.OptionsBehavior.Editable = False
-        Me.gvi.OptionsEditForm.PopupEditFormWidth = 1200
-        Me.gvi.OptionsView.ColumnAutoWidth = False
-        Me.gvi.OptionsView.ShowFooter = True
-        Me.gvi.OptionsView.ShowGroupPanel = False
-        Me.gvi.OptionsView.ShowIndicator = False
-        '
-        'colxArea
-        '
-        Me.colxArea.Caption = "Area"
-        Me.colxArea.FieldName = "xArea"
-        Me.colxArea.MinWidth = 30
-        Me.colxArea.Name = "colxArea"
-        Me.colxArea.Visible = True
-        Me.colxArea.VisibleIndex = 1
-        Me.colxArea.Width = 372
-        '
-        'colxCurrency
-        '
-        Me.colxCurrency.Caption = "Currency"
-        Me.colxCurrency.FieldName = "xCurrency"
-        Me.colxCurrency.MinWidth = 75
-        Me.colxCurrency.Name = "colxCurrency"
-        Me.colxCurrency.OptionsColumn.FixedWidth = True
-        Me.colxCurrency.Visible = True
-        Me.colxCurrency.VisibleIndex = 2
-        Me.colxCurrency.Width = 225
-        '
-        'colxDate
-        '
-        Me.colxDate.Caption = "Date"
-        Me.colxDate.FieldName = "xDate"
-        Me.colxDate.MinWidth = 30
-        Me.colxDate.Name = "colxDate"
-        Me.colxDate.OptionsColumn.FixedWidth = True
-        Me.colxDate.Visible = True
-        Me.colxDate.VisibleIndex = 0
-        Me.colxDate.Width = 105
-        '
-        'colxInverse
-        '
-        Me.colxInverse.Caption = "Inverse"
-        Me.colxInverse.DisplayFormat.FormatString = "{0:n4}"
-        Me.colxInverse.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.colxInverse.FieldName = "xInverse"
-        Me.colxInverse.MinWidth = 112
-        Me.colxInverse.Name = "colxInverse"
-        Me.colxInverse.OptionsColumn.FixedWidth = True
-        Me.colxInverse.Visible = True
-        Me.colxInverse.VisibleIndex = 4
-        Me.colxInverse.Width = 120
-        '
-        'colxRate
-        '
-        Me.colxRate.Caption = "Rate"
-        Me.colxRate.DisplayFormat.FormatString = "{0:n4}"
-        Me.colxRate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.colxRate.FieldName = "xRate"
-        Me.colxRate.MinWidth = 112
-        Me.colxRate.Name = "colxRate"
-        Me.colxRate.OptionsColumn.FixedWidth = True
-        Me.colxRate.Visible = True
-        Me.colxRate.VisibleIndex = 3
-        Me.colxRate.Width = 120
         '
         's6
         '
@@ -1398,141 +1247,15 @@ Partial Class MainForm
         Me.colc24.VisibleIndex = 1
         Me.colc24.Width = 120
         '
-        's4
-        '
-        Me.ttc.SetAllowHtmlText(Me.s4, DevExpress.Utils.DefaultBoolean.[Default])
-        Me.s4.Caption = "ExchangeRate"
-        Me.s4.Controls.Add(Me.gce)
-        Me.s4.Controls.Add(Me.StandaloneBarDockControl4)
-        Me.s4.Margin = New System.Windows.Forms.Padding(4)
-        Me.s4.Name = "s4"
-        Me.s4.Size = New System.Drawing.Size(1157, 415)
-        '
-        'gce
-        '
-        Me.gce.DataSource = Me.bsExchange
-        Me.gce.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.gce.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(4)
-        Me.gce.Location = New System.Drawing.Point(0, 42)
-        Me.gce.MainView = Me.gve
-        Me.gce.Margin = New System.Windows.Forms.Padding(4)
-        Me.gce.MenuManager = Me.bm
-        Me.gce.Name = "gce"
-        Me.gce.Size = New System.Drawing.Size(1157, 373)
-        Me.gce.TabIndex = 3
-        Me.gce.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gve})
-        '
         'bsExchange
         '
         Me.bsExchange.DataMember = "ExchangeRate"
         Me.bsExchange.DataSource = Me.ds
         '
-        'gve
-        '
-        Me.gve.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.gve.ColumnPanelRowHeight = 66
-        Me.gve.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colxChange1, Me.colxCountry1, Me.colxCurrency1, Me.colxDat01, Me.colxDat11, Me.colid})
-        Me.gve.DetailHeight = 512
-        Me.gve.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus
-        Me.gve.GridControl = Me.gce
-        Me.gve.Name = "gve"
-        Me.gve.OptionsBehavior.Editable = False
-        Me.gve.OptionsEditForm.PopupEditFormWidth = 1200
-        Me.gve.OptionsView.ColumnAutoWidth = False
-        Me.gve.OptionsView.ShowFooter = True
-        Me.gve.OptionsView.ShowGroupPanel = False
-        Me.gve.OptionsView.ShowIndicator = False
-        Me.gve.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() {New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.colxCountry1, DevExpress.Data.ColumnSortOrder.Ascending)})
-        '
-        'colxChange1
-        '
-        Me.colxChange1.Caption = "Changes"
-        Me.colxChange1.DisplayFormat.FormatString = "{0:n2} %"
-        Me.colxChange1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.colxChange1.FieldName = "xChange"
-        Me.colxChange1.MinWidth = 30
-        Me.colxChange1.Name = "colxChange1"
-        Me.colxChange1.OptionsColumn.FixedWidth = True
-        Me.colxChange1.Visible = True
-        Me.colxChange1.VisibleIndex = 5
-        Me.colxChange1.Width = 90
-        '
-        'colxCountry1
-        '
-        Me.colxCountry1.Caption = "Country"
-        Me.colxCountry1.FieldName = "xCountry"
-        Me.colxCountry1.MinWidth = 30
-        Me.colxCountry1.Name = "colxCountry1"
-        Me.colxCountry1.Visible = True
-        Me.colxCountry1.VisibleIndex = 2
-        Me.colxCountry1.Width = 330
-        '
-        'colxCurrency1
-        '
-        Me.colxCurrency1.Caption = "Name"
-        Me.colxCurrency1.FieldName = "xCurrency"
-        Me.colxCurrency1.MinWidth = 30
-        Me.colxCurrency1.Name = "colxCurrency1"
-        Me.colxCurrency1.OptionsColumn.FixedWidth = True
-        Me.colxCurrency1.Visible = True
-        Me.colxCurrency1.VisibleIndex = 1
-        Me.colxCurrency1.Width = 187
-        '
-        'colxDat01
-        '
-        Me.colxDat01.Caption = "Date"
-        Me.colxDat01.DisplayFormat.FormatString = "n4"
-        Me.colxDat01.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.colxDat01.FieldName = "xDat0"
-        Me.colxDat01.MinWidth = 30
-        Me.colxDat01.Name = "colxDat01"
-        Me.colxDat01.OptionsColumn.FixedWidth = True
-        Me.colxDat01.Visible = True
-        Me.colxDat01.VisibleIndex = 3
-        Me.colxDat01.Width = 120
-        '
-        'colxDat11
-        '
-        Me.colxDat11.Caption = "Date"
-        Me.colxDat11.DisplayFormat.FormatString = "n4"
-        Me.colxDat11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
-        Me.colxDat11.FieldName = "xDat1"
-        Me.colxDat11.MinWidth = 30
-        Me.colxDat11.Name = "colxDat11"
-        Me.colxDat11.OptionsColumn.FixedWidth = True
-        Me.colxDat11.Visible = True
-        Me.colxDat11.VisibleIndex = 4
-        Me.colxDat11.Width = 120
-        '
-        'colid
-        '
-        Me.colid.Caption = "Currency"
-        Me.colid.FieldName = "id"
-        Me.colid.MinWidth = 30
-        Me.colid.Name = "colid"
-        Me.colid.OptionsColumn.FixedWidth = True
-        Me.colid.Visible = True
-        Me.colid.VisibleIndex = 0
-        '
         'bsSector
         '
         Me.bsSector.DataMember = "Sector"
         Me.bsSector.DataSource = Me.ds
-        '
-        'OfficeNavigationBar1
-        '
-        Me.OfficeNavigationBar1.AutoSizeInLayoutControl = True
-        Me.OfficeNavigationBar1.CustomizationButtonVisibility = DevExpress.XtraBars.Navigation.CustomizationButtonVisibility.Hidden
-        Me.OfficeNavigationBar1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.OfficeNavigationBar1.Location = New System.Drawing.Point(0, 456)
-        Me.OfficeNavigationBar1.Margin = New System.Windows.Forms.Padding(4)
-        Me.OfficeNavigationBar1.MenuManager = Me.bm
-        Me.OfficeNavigationBar1.Name = "OfficeNavigationBar1"
-        Me.OfficeNavigationBar1.NavigationClient = Me.oNav
-        Me.OfficeNavigationBar1.Size = New System.Drawing.Size(1157, 55)
-        Me.OfficeNavigationBar1.TabIndex = 4
-        Me.OfficeNavigationBar1.Text = "OfficeNavigationBar1"
-        Me.OfficeNavigationBar1.ViewMode = DevExpress.XtraBars.Navigation.OfficeNavigationBarViewMode.Skinned
         '
         'dlf
         '
@@ -1557,6 +1280,21 @@ Partial Class MainForm
         'fbd
         '
         Me.fbd.RootFolder = System.Environment.SpecialFolder.MyComputer
+        '
+        'OfficeNavigationBar1
+        '
+        Me.OfficeNavigationBar1.AutoSizeInLayoutControl = True
+        Me.OfficeNavigationBar1.CustomizationButtonVisibility = DevExpress.XtraBars.Navigation.CustomizationButtonVisibility.Hidden
+        Me.OfficeNavigationBar1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.OfficeNavigationBar1.Location = New System.Drawing.Point(0, 456)
+        Me.OfficeNavigationBar1.Margin = New System.Windows.Forms.Padding(4)
+        Me.OfficeNavigationBar1.MenuManager = Me.bm
+        Me.OfficeNavigationBar1.Name = "OfficeNavigationBar1"
+        Me.OfficeNavigationBar1.NavigationClient = Me.oNav
+        Me.OfficeNavigationBar1.Size = New System.Drawing.Size(1157, 55)
+        Me.OfficeNavigationBar1.TabIndex = 4
+        Me.OfficeNavigationBar1.Text = "OfficeNavigationBar1"
+        Me.OfficeNavigationBar1.ViewMode = DevExpress.XtraBars.Navigation.OfficeNavigationBarViewMode.Skinned
         '
         'MainForm
         '
@@ -1588,18 +1326,12 @@ Partial Class MainForm
         CType(Me.bsRar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gvr, System.ComponentModel.ISupportInitialize).EndInit()
         Me.s3.ResumeLayout(False)
-        Me.s5.ResumeLayout(False)
-        CType(Me.gci, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bsMundi, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.gvi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.s6.ResumeLayout(False)
         CType(Me.gco, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bsOptions, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gvo, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.s4.ResumeLayout(False)
-        CType(Me.gce, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bsExchange, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.gve, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bsSector, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OfficeNavigationBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -1618,19 +1350,14 @@ Partial Class MainForm
 	Friend WithEvents dlf As DevExpress.LookAndFeel.DefaultLookAndFeel
 	Friend WithEvents pr As DevExpress.XtraEditors.Repository.PersistentRepository
 	Friend WithEvents ds As ods
-	Friend WithEvents OfficeNavigationBar1 As DevExpress.XtraBars.Navigation.OfficeNavigationBar
-	Friend WithEvents ssm As DevExpress.XtraSplashScreen.SplashScreenManager
-	Friend WithEvents oNav As DevExpress.XtraBars.Navigation.NavigationFrame
-	Friend WithEvents s1 As DevExpress.XtraBars.Navigation.NavigationPage
+    Friend WithEvents ssm As DevExpress.XtraSplashScreen.SplashScreenManager
+    Friend WithEvents oNav As DevExpress.XtraBars.Navigation.NavigationFrame
+    Friend WithEvents s1 As DevExpress.XtraBars.Navigation.NavigationPage
     Friend WithEvents s3 As DevExpress.XtraBars.Navigation.NavigationPage
-    Friend WithEvents s4 As DevExpress.XtraBars.Navigation.NavigationPage
-    Friend WithEvents s5 As DevExpress.XtraBars.Navigation.NavigationPage
     Friend WithEvents Bar4 As DevExpress.XtraBars.Bar
     Friend WithEvents Bar5 As DevExpress.XtraBars.Bar
-    Friend WithEvents StandaloneBarDockControl5 As DevExpress.XtraBars.StandaloneBarDockControl
     Friend WithEvents StandaloneBarDockControl2 As DevExpress.XtraBars.StandaloneBarDockControl
     Friend WithEvents StandaloneBarDockControl3 As DevExpress.XtraBars.StandaloneBarDockControl
-    Friend WithEvents StandaloneBarDockControl4 As DevExpress.XtraBars.StandaloneBarDockControl
     Friend WithEvents Bar6 As DevExpress.XtraBars.Bar
     Friend WithEvents Bar7 As DevExpress.XtraBars.Bar
     Friend WithEvents Bar8 As DevExpress.XtraBars.Bar
@@ -1681,61 +1408,47 @@ Partial Class MainForm
     Friend WithEvents colF13 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colF15 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colF16 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents gce As DevExpress.XtraGrid.GridControl
     Friend WithEvents bsExchange As BindingSource
-    Friend WithEvents gve As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents colxChange1 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colxCountry1 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colxCurrency1 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colxDat01 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colxDat11 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents gci As DevExpress.XtraGrid.GridControl
     Friend WithEvents bsMundi As BindingSource
-    Friend WithEvents gvi As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents colxArea As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colxCurrency As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colxDate As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colxInverse As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colxRate As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents gco As DevExpress.XtraGrid.GridControl
     Friend WithEvents bsOptions As BindingSource
     Friend WithEvents gvo As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents colc110 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colc24 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colid As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents bsSector As BindingSource
     Friend WithEvents bwCalc As System.ComponentModel.BackgroundWorker
     Friend WithEvents oCalcButton As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oMktMciUpdateButton As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents bwWeb As System.ComponentModel.BackgroundWorker
-	Friend WithEvents oStatus As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents bwMkt As System.ComponentModel.BackgroundWorker
-	Friend WithEvents col_color As DevExpress.XtraGrid.Columns.GridColumn
-	Friend WithEvents rpYesNo As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
-	Friend WithEvents oExportButton As DevExpress.XtraBars.BarSubItem
-	Friend WithEvents oRarExport_PDF As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oRarExport_Excel As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oRarExport_Csv As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents sfd As SaveFileDialog
-	Friend WithEvents oRarExport_Html As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents BarSubItem1 As DevExpress.XtraBars.BarSubItem
-	Friend WithEvents oRiskExport_PDF As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oRiskExport_Excel As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oRiskExport_CSV As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oRiskExport_Html As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oSetFolderButton As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oFolderLoc As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents fbd As FolderBrowserDialog
-	Friend WithEvents BarStaticItem1 As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents BarStaticItem2 As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents BarStaticItem3 As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents BarStaticItem4 As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents BarStaticItem6 As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents BarStaticItem5 As DevExpress.XtraBars.BarStaticItem
-	Friend WithEvents oAddButton As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents oDeleteButton As DevExpress.XtraBars.BarButtonItem
-	Friend WithEvents SkinBarSubItem1 As DevExpress.XtraBars.SkinBarSubItem
-	Friend WithEvents BarEditItem1 As DevExpress.XtraBars.BarEditItem
-	Friend WithEvents RepositoryItemSearchControl1 As DevExpress.XtraEditors.Repository.RepositoryItemSearchControl
+    Friend WithEvents oMktMciUpdateButton As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents bwWeb As System.ComponentModel.BackgroundWorker
+    Friend WithEvents oStatus As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents bwMkt As System.ComponentModel.BackgroundWorker
+    Friend WithEvents col_color As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents rpYesNo As DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit
+    Friend WithEvents oExportButton As DevExpress.XtraBars.BarSubItem
+    Friend WithEvents oRarExport_PDF As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oRarExport_Excel As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oRarExport_Csv As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents sfd As SaveFileDialog
+    Friend WithEvents oRarExport_Html As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarSubItem1 As DevExpress.XtraBars.BarSubItem
+    Friend WithEvents oRiskExport_PDF As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oRiskExport_Excel As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oRiskExport_CSV As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oRiskExport_Html As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oSetFolderButton As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oFolderLoc As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents fbd As FolderBrowserDialog
+    Friend WithEvents BarStaticItem1 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents BarStaticItem2 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents BarStaticItem3 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents BarStaticItem4 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents BarStaticItem6 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents BarStaticItem5 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents oAddButton As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents oDeleteButton As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents SkinBarSubItem1 As DevExpress.XtraBars.SkinBarSubItem
+    Friend WithEvents BarEditItem1 As DevExpress.XtraBars.BarEditItem
+    Friend WithEvents RepositoryItemSearchControl1 As DevExpress.XtraEditors.Repository.RepositoryItemSearchControl
     Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents OfficeNavigationBar1 As DevExpress.XtraBars.Navigation.OfficeNavigationBar
 End Class
