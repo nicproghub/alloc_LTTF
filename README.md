@@ -26,9 +26,9 @@ The tool employs a sophisticated dynamic allocation approach considering:
 
 ### Supported Asset Classes
 The tool handles diverse financial instruments including:
-- Interest Rates Furtures (Three Month Saron)
-- Equity Indices (FTSE China A50, Amsterdam Index)
-- Currencies (Australian Dollar, AUD/JPY)
-- Commodities Furtures (Aluminum, Brent Crude Oil, Wheat)
-- Cryptocurrencies (Bitcoin)
-- Fixed Income Furtures (Euro-BONO)
+- Interest Rates Furtures 
+- Equity Indices 
+- Currencies 
+- Commodities Furtures 
+- Cryptocurrencies 
+- Fixed Income Furtures 
